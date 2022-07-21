@@ -1,0 +1,47 @@
+{
+  "name": "@mrtnvh/github-api-ts",
+  "version": "0.1.0",
+  "description": "GitHub REST API client on TypeScript",
+  "scripts": {
+    "generate": "node generate.js",
+    "build": "tsc",
+    "prerelease": "run-s generate build",
+    "release": "npm publish dist --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanhoofmaarten/github-api-ts.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "github",
+    "api",
+    "typescript"
+  ],
+  "author": "@mrtnvh",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/vanhoofmaarten/github-api-ts/issues"
+  },
+  "homepage": "https://github.com/vanhoofmaarten/github-api-ts#readme",
+  "devDependencies": {
+    "openapi-typescript-codegen": "^0.23.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
