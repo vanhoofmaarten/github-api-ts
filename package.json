@@ -4,9 +4,9 @@
   "description": "GitHub REST API client on TypeScript",
   "scripts": {
     "generate": "node generate.js",
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "prerelease": "run-s generate build",
-    "release": "npm publish dist --access public"
+    "release": "npm publish --access public"
   },
   "repository": {
     "type": "git",
